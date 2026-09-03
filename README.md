@@ -166,17 +166,12 @@ The current FAQ knowledge base is limited.
 A larger FAQ dataset could be improved using a RAG-based approach.
 AI Assistance
 
-
 AI coding assistance was used during development for code generation, debugging, and documentation. The generated code was reviewed and adapted for the project.
-
-
 
 
 Security
 
-
 API keys should be stored in the .env file and should not be uploaded to GitHub.
-
 
 The .gitignore file should include:
 
@@ -193,5 +188,4 @@ The Voice FAQ Bot demonstrates how speech recognition, large language models, FA
 
 
 
-**Save this as:** `README.md`  
-**Do not save it as:** `README.txt` or `README.docx`.
+
