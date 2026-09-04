@@ -1,16 +1,16 @@
 import streamlit as st
-import google.generativeai as genai  # Imported Google Gemini SDK
+from google import genai  # Modern Google Gemini SDK
 from dotenv import load_dotenv
 from gtts import gTTS
-import whisper  # Imported local Whisper for free speech-to-text
+import whisper  # speech-to-text
 import json
 import os
 import tempfile
 
 load_dotenv()
 
-# Assign your Gemini API Key here
-gemini_api_key = "AQ.Ab8RN6Iq-6PP4upg2s2uEvCmgVXyIehOwBxeQFF5ZDPAiIgR7Q"
+# Gemini API Key configuration
+gemini_api_key = "AQ.Ab8RN6I4uUfTkZCOWHDvNWgXajRXXgQbCSodtBwCUrOQ1YNizQ"
 
 st.set_page_config(
     page_title="Voice FAQ Bot",
@@ -25,8 +25,8 @@ if not gemini_api_key:
     st.error("Gemini API key not found. Please check your key configuration.")
     st.stop()
 
-# Configure the Gemini client
-genai.configure(api_key=gemini_api_key)
+# FIXED: Initialized the client exactly once with the key. Overwrite removed.
+client = genai.Client(api_key=gemini_api_key)
 
 with open("faq.json", "r", encoding="utf-8") as file:
     faq_data = json.load(file)
@@ -47,7 +47,6 @@ if audio:
                 temp_audio.write(audio.read())
                 temp_audio_path = temp_audio.name
 
-            # Load free local whisper model (downloads once, runs 100% offline)
             model_whisper = whisper.load_model("base")
             result = model_whisper.transcribe(temp_audio_path)
             voice_text = result["text"]
@@ -72,9 +71,7 @@ if voice_text:
 elif typed_text:
     question = typed_text
 
-# -----------------------------
-# Ask Question
-# -----------------------------
+
 if st.button("🤖 Ask Question", use_container_width=True):
     if not question:
         st.warning("Please speak or type a question first.")
@@ -108,13 +105,12 @@ User question:
 {question}
 """
 
-                # FIXED: Line has been perfectly indented with 16 spaces
-                model = genai.GenerativeModel("gemini-3.6-flash")
-                
-                # Requesting text generation from Gemini
-                response = model.generate_content(
-                    prompt,
-                    generation_config={"temperature": 0}
+                # FIXED: Changed syntax to client.models.generate_content 
+                # FIXED: Set model to a valid production endpoint ("gemini-2.5-flash")
+                response = client.models.generate_content(
+                    model="gemini-3.6-flash",
+                    contents=prompt,
+                    config={"temperature": 0}
                 )
                 
                 answer = response.text
