@@ -1,30 +1,22 @@
 
 [
-  
-
+  [
   {
-    "question": "Can the FAQ content be updated?",
-    "answer": "Yes. You can edit the FAQ JSON file and add, remove, or update question and answer pairs."
+    "question": "What is AI?",
+    "answer": "AI stands for Artificial Intelligence."
+  },
+  {
+    "question": "What is machine learning?",
+    "answer": "Machine learning is a type of AI that learns from data."
+  },
+  {
+    "question": "What is your project?",
+    "answer": "This is an AI-powered FAQ assistant."
+  },
+  {
+    "question": "How does the voice feature work?",
+    "answer": "The voice input is converted into text and processed by the assistant."
   }
 
-{
-      "question": "How do I reset my password?",
-        "answer": "You can reset your password by clicking the Forgot Password link on the login page."
-    },
- {
-        "question": "What are the support hours?",
-        "answer": "Our support team is available Monday to Friday from 9 AM to 6 PM."
-    },
-   {
-        "question": "How do I contact support?",
-        "answer": "You can contact support through the helpdesk email or the support page."
-    },
-    {
-        "question": "How do I update my profile?",
-        "answer": "Open your profile settings, edit your information, and click Save."
-    },
-    {
-        "question": "Where can I find my invoices?",
-        "answer": "Your invoices are available under the Billing section of your account."
-    }
+  
 ]
