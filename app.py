@@ -10,7 +10,7 @@ import tempfile
 load_dotenv()
 
 # Gemini API Key configuration
-gemini_api_key = "AQ.Ab8RN6I4uUfTkZCOWHDvNWgXajRXXgQbCSodtBwCUrOQ1YNizQ"
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
 
 st.set_page_config(
     page_title="Voice FAQ Bot",
