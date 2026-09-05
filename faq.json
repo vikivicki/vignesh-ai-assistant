@@ -1,4 +1,71 @@
+.
+
+
+
 [
+  {
+    "question": "What is Vignesh AI Assistant?",
+    "answer": "Vignesh AI Assistant is an AI-powered FAQ assistant that supports text and voice interaction."
+  },
+  {
+    "question": "How can I use the assistant?",
+    "answer": "You can type your question or use the voice input option to ask a question."
+  },
+  {
+    "question": "What technologies are used?",
+    "answer": "The project uses Python, Streamlit, Google Gemini API, speech-to-text, text-to-speech, and python-dotenv."
+  },
+  {
+    "question": "Can I ask questions using voice?",
+    "answer": "Yes. You can use the voice input feature to ask questions using your microphone."
+  },
+  {
+    "question": "Can I type my question?",
+    "answer": "Yes. The assistant supports both text and voice input."
+  },
+  {
+    "question": "Does the assistant provide voice responses?",
+    "answer": "Yes, when the voice response feature is available and properly configured."
+  },
+  {
+    "question": "What is the purpose of the FAQ file?",
+    "answer": "The FAQ file stores frequently asked questions and their answers so the assistant can provide relevant information."
+  },
+  {
+    "question": "Can I add more questions?",
+    "answer": "Yes. You can add additional question and answer pairs to the FAQ JSON file."
+  },
+  {
+    "question": "What should I do if the API key is invalid?",
+    "answer": "Check that the API key is correct, active, and configured properly in the environment variables or deployment secrets."
+  },
+  {
+    "question": "Why is my voice input not working?",
+    "answer": "Check your browser microphone permission, microphone connection, and internet connection."
+  },
+  {
+    "question": "Does the application require internet access?",
+    "answer": "Yes. Internet access is required for cloud-based AI services such as the Gemini API."
+  },
+  {
+    "question": "Where should I store the API key?",
+    "answer": "For local development, store it in the .env file. For deployment, use the platform's secret or environment-variable settings."
+  },
+  {
+    "question": "Should I upload my .env file to GitHub?",
+    "answer": "No. Never upload a .env file containing a real API key to GitHub."
+  },
+  {
+    "question": "How do I start the application?",
+    "answer": "Run 'streamlit run app.py' from the project directory."
+  },
+  {
+    "question": "Can the FAQ content be updated?",
+    "answer": "Yes. You can edit the FAQ JSON file and add, remove, or update question and answer pairs."
+  }
+
+
+
     {
         "question": "How do I reset my password?",
         "answer": "You can reset your password by clicking the Forgot Password link on the login page."
