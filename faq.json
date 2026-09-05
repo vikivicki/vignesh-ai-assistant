@@ -30,7 +30,6 @@
     "answer": "Yes, when the voice response feature is available and properly configured."
   },
 
-
   {
     "question": "What is the purpose of the FAQ file?",
     "answer": "The FAQ file stores frequently asked questions and their answers so the assistant can provide relevant information."
@@ -71,17 +70,15 @@
     "answer": "Yes. You can edit the FAQ JSON file and add, remove, or update question and answer pairs."
   }
 
-
-
-    {
-        "question": "How do I reset my password?",
+{
+      "question": "How do I reset my password?",
         "answer": "You can reset your password by clicking the Forgot Password link on the login page."
     },
-    {
+ {
         "question": "What are the support hours?",
         "answer": "Our support team is available Monday to Friday from 9 AM to 6 PM."
     },
-    {
+   {
         "question": "How do I contact support?",
         "answer": "You can contact support through the helpdesk email or the support page."
     },
