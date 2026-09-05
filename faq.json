@@ -1,22 +1,18 @@
-
 [
-  [
   {
     "question": "What is AI?",
     "answer": "AI stands for Artificial Intelligence."
-  }
+  },
   {
     "question": "What is machine learning?",
     "answer": "Machine learning is a type of AI that learns from data."
-  }
+  },
   {
     "question": "What is your project?",
     "answer": "This is an AI-powered FAQ assistant."
-  }
+  },
   {
     "question": "How does the voice feature work?",
     "answer": "The voice input is converted into text and processed by the assistant."
   }
-
-  
 ]
