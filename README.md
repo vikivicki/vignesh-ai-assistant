@@ -105,16 +105,21 @@ pip install -r requirements.txt
 ```
 
 ## 🔑 API Key Configuration
+### 3. Configure API Key
 
-The application requires a Google Gemini API key.
+For local development, API keys can be stored in a `.env` file.
 
-Create a `.env` file in the project root:
+For Streamlit Cloud deployment, use **Streamlit Secrets** instead of uploading the `.env` file.
 
-```env
-GEMINI_API_KEY=your_api_key_here
-```
+In Streamlit Cloud:
 
-Replace `your_api_key_here` with your actual API key.
+1. Open your deployed app.
+2. Go to **Manage app**.
+3. Open **Settings → Secrets**.
+4. Add:
+
+```toml
+GEMINI_API_KEY = "your_gemini_api_key_here"
 
 ### Important Security Rule
 
@@ -247,3 +252,6 @@ The project can be further extended with additional FAQ data, improved speech pr
 
 GitHub:
 https://github.com/vikivicki/vignesh-ai-assistant
+## 🚀 Live Demo
+
+🔗 **Deployed Application:** [Vignesh AI Assistant.] https://vignesh-ai-assistant-hfy8ehbu5vemkagugu5545.streamlit.app/
